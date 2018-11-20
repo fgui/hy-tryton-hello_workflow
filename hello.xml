@@ -34,6 +34,43 @@ this repository contains the full copyright notices and license terms. -->
       <field name="name">hello_form</field>
       <field name="inherit" ref="hello.hello_view_form"/>
     </record>
+
+    <!-- domain -->
+
+    <record model="ir.action.act_window.domain" id="act_hello_domain_draft">
+      <field name="name">Draft</field>
+      <field name="sequence" eval="10"/>
+      <field name="domain" eval="[('state', '=', 'draft')]" pyson="1"/>
+      <field name="count" eval="True"/>
+      <field name="act_window" ref="hello.act_hello"/>
+    </record>
+    <record model="ir.action.act_window.domain" id="act_hello_domain_baby">
+      <field name="name">Baby</field>
+      <field name="sequence" eval="20"/>
+      <field name="domain" eval="[('state', '=', 'baby')]" pyson="1"/>
+      <field name="count" eval="True"/>
+      <field name="act_window" ref="hello.act_hello"/>
+    </record>
+    <record model="ir.action.act_window.domain" id="act_hello_domain_adult">
+      <field name="name">Adult</field>
+      <field name="sequence" eval="30"/>
+      <field name="domain" eval="[('state', '=', 'adult')]" pyson="1"/>
+      <field name="count" eval="True"/>
+      <field name="act_window" ref="hello.act_hello"/>
+    </record>
+    <record model="ir.action.act_window.domain" id="act_hello_domain_dead">
+      <field name="name">Dead</field>
+      <field name="sequence" eval="40"/>
+      <field name="domain" eval="[('state', '=', 'dead')]" pyson="1"/>
+      <field name="count" eval="True"/>
+      <field name="act_window" ref="hello.act_hello"/>
+    </record>
+    <record model="ir.action.act_window.domain" id="act_hello_domain_all">
+      <field name="name">All</field>
+      <field name="sequence" eval="9999"/>
+      <field name="domain"></field>
+      <field name="act_window" ref="hello.act_hello"/>
+    </record>
     
   </data>
 </tryton>
