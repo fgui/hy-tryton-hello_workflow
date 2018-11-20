@@ -1,0 +1,10 @@
+<data>
+    <xpath expr="/form/field[@name='greeting']" position="after">
+      <group col="-1" colspan="4" id="buttons">
+        <button name="draft" />
+        <button name="baby" />
+        <button name="adult" />
+        <button name="dead" />
+      </group>
+    </xpath>
+</data>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+  <data>
+    <!-- buttons -->  
+    <record model="ir.model.button" id="hello_draft_button">
+      <field name="name">draft</field>
+      <field name="string">Draft</field>
+      <field name="model" search="[('model', '=', 'hello')]"/>
+    </record>
+    
+    <record model="ir.model.button" id="hello_baby_button">
+      <field name="name">baby</field>
+      <field name="string">Baby</field>
+      <field name="model" search="[('model', '=', 'hello')]"/>
+    </record>
+    
+    <record model="ir.model.button" id="hello_adult_button">
+      <field name="name">adult</field>
+      <field name="string">Adult</field>
+      <field name="model" search="[('model', '=', 'hello')]"/>
+    </record>
+    
+    <record model="ir.model.button" id="hello_dead_button">
+      <field name="name">dead</field>
+      <field name="string">Dead</field>
+      <field name="model" search="[('model', '=', 'hello')]"/>
+    </record>
+
+    <!-- add buttons to the form view -->
+    <record model="ir.ui.view" id="hello_view_form">
+      <field name="model">hello</field>
+      <field name="name">hello_form</field>
+      <field name="inherit" ref="hello.hello_view_form"/>
+    </record>
+    
+  </data>
+</tryton>
